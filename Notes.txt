@@ -1,0 +1,99 @@
+ViewBag is a property – considered a dynamic object – that enables you to share values dynamically between 
+the controller and view within ASP.NET MVC applications.
+The @Html.Action method actually invokes a controller and renders the view,
+The Enrollments property is a navigation property. 
+Navigation properties hold other entities that are related to this entity
+
+[DatabaseGenerated(DatabaseGeneratedOption.None)] what is this?
+The DbSet class represents an entity set that can be used for create, read, update, and delete operations.
+
+DbModelBuilder is used to map CLR classes to a database schema.
+This code centric approach to building an Entity Data Model (EDM) model is known as 'Code First'.
+
+This code creates a DbSet property for each entity set. In Entity Framework terminology,
+The DbSet class represents an entity set that can be used for create, read, update, and delete operations 
+an entity set typically corresponds to a database table, and an entity corresponds to a row in the table
+
+The Seed method takes the database context object as an input parameter, and the code in the method uses that 
+object to add new entities to the database. To seed data into your database, you need to override the Seed method
+
+In Entity Framework terminology, an entity set typically corresponds to a database table,
+ and an entity corresponds to a row in the table.
+
+Action Result is actually a data type. When it is used with action method, it is called return type.
+ As you know, an action is referred to as a method of the controller, the Action Result is the result of action when it executes.
+ In fact, Action Result is a return type
+We Are using Repositry Pattern Here
+
+DropCreateDatabaseIfModelChanges
+
+we have stored Data in the form of objects in our DAL Layer SchoolInitializer File SchoolInitializer is EF 
+and storing data in the form of objects and using the ORM data will be transferred into the DB.
+****************************Questions in ContosoUniversity Project*******************
+[DatabaseGenerated(DatabaseGeneratedOption.None)] what is this?
+We are using entity framework N poco is not so common and i cant find any help on it
+
+Entity Framework can automatically create (or drop and re-create) a database for you when the application runs
+how is it possible or when we drop fresh or migrate database whether the data will be lost?
+
+****Replace with this in Web.config if there is an issue****
+ <entityFramework>
+    <providers>
+      <provider invariantName="System.Data.SqlClient" type="System.Data.Entity.SqlServer.SqlProviderServices, EntityFramework.SqlServer" />
+    </providers>
+  </entityFramework>
+
+****Code Review Questions******
+What is Query String.
+A query string is a collection of characters input to a computer or web browser.
+A Query String is helpful when we want to transfer a value from one page to another
+what is DBSet?
+This code creates a DbSet property for each entity set. In Entity Framework terminology,
+The DbSet class represents an entity set that can be used for create, read, update, and delete operations 
+an entity set typically corresponds to a database table, and an entity corresponds to a row in the table
+When OnModelCreate Will be called?
+It's called when your database context is initialized.
+If you're using a database initializer in your startup code, it'll happen then
+
+What is Bind/ Include?
+What was Dispose Method and why it is used?
+=> Releases the Allocated Resources for this Context.
+
+***HTTP Status Codes********
+200
+OK
+201
+Created
+202
+Accepted
+
+
+400
+Bad Request
+401
+Unauth­orized
+402
+Payment Required res
+403
+Forbidden
+404
+Not Found
+405
+Method Not Allowed
+
+What is Encapsulation?
+Encapsulation is defined as binding together the data and the functions that manipulates them
+What is Abstraction?
+What is polymorphism?
+What is Genercics?
+generics allow you to write a class or method that can work with any data type.. it lowers the burden of Boxing and Un-Boxing
+
+What is Dependency Injection?
+Basically it is used the make the classes totally loosely coupled.
+three types of classes here Client Class|Service Class|Injector Class.. Client class is dependent on service class we inject service class
+into client class using injector class. we dont create object of service in client class.
+
+Example:
+Yesterday I found a mobile on the bus. The person who lost it had no clue about the person possessing her mobile. I called her dad and told him I
+ have the mobile of his daughter. So I injected the dependency from me into him. Typically a case of the hollywood principle 
+"Don't call us (because you can't!), we call you". Later he came and picked up his daughters phone
